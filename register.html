@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fox Day Campus Events - Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Fox Day Campus Events</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="events.php">View Events</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Register for Fox Day</h2>
+
+    <form class="form-card" action="process.php" method="POST">
+      <label>
+        Student Name*:
+        <input type="text" name="student_name" required />
+      </label>
+
+      <label>
+        Email*:
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Select an Event*:
+        <select name="event" required>
+          <option value="">-- Choose an event --</option>
+          <option value="Mystery Destination Bus Ride">Mystery Destination Bus Ride</option>
+          <option value="Campus Clue Hunt: Find the Fox">Campus Clue Hunt: Find the Fox</option>
+          <option value="Fox Day Picnic & Lemonade">Fox Day Picnic & Lemonade</option>
+          <option value="Surprise Pop-Up Concert">Surprise Pop-Up Concert</option>
+        </select>
+      </label>
+
+      <fieldset class="fieldset">
+        <legend>Year:</legend>
+        <label><input type="radio" name="year" value="Freshman" /> Freshman</label>
+        <label><input type="radio" name="year" value="Sophomore" /> Sophomore</label>
+        <label><input type="radio" name="year" value="Junior" /> Junior</label>
+        <label><input type="radio" name="year" value="Senior" /> Senior</label>
+      </fieldset>
+
+      <label>
+        What are you most excited about?
+        <textarea name="message" rows="4" placeholder="Tell us your Fox Day hype..."></textarea>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" name="secret_promise" value="yes" />
+        I promise to keep the Fox Day surprise secret (optional)
+      </label>
+
+      <button class="btn" type="submit">Submit Registration</button>
+      <p class="hint">Fields marked * are required.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p> Be safe this Foxday.</p>
+  </footer>
+</body>
+</html>
